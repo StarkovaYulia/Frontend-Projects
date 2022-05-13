@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>webcam</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
+  <script type="module" src='js/main.mjs'></script>
+</head>
+<body>
+  <h1>ШИФТ</h1>
+  <h2>Задание 2</h2>
+  
+  <div id="photobooth">
+    <div class="camera">
+      <video id="video" width="480">Video stream not available.</video>
+      <form onsubmit="return false">
+        <input type="checkbox" id="voice_control" class="voice-control">
+        <label for="voice_control"></label>
+        <label>Задержка <input name="delay" type="number" value="0"> сек</label>
+        <button name="shot">Снимок!</button> 
+        <button name="burst_shot">Серия снимков</button>
+        <button name="clear">Сбросить карточки</button> 
+      </form>
+    </div>    
+
+    <canvas id="canvas"></canvas>
+
+    <div class="gallery">
+      <template id="template">
+        <div class="card">
+          <img width="240" height="180" id="photoFirst"> 
+          <img width="240" height="180" id="photoSecond"> 
+          <img width="240" height="180" id="photoThird"> 
+        </div>
+      </template>
+    </div>  
+  </div>
+  
+</body>
+</html>

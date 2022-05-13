@@ -1,0 +1,11 @@
+.prioritetsFont{
+    font-weight: bold;
+    margin: 10px;
+    margin-top: 3px;
+    padding: 0;
+}
+
+.badge{
+    border: solid 0.02em;
+    border-color: black;
+}

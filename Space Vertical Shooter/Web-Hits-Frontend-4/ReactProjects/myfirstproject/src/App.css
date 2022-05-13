@@ -1,0 +1,134 @@
+body{
+  height: 100vh;
+  margin: 0;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.navbar > .container{
+  margin: 0;
+  justify-content: unset !important;
+}
+
+.nav-fill .nav-item .nav-link, .nav-justified .nav-item .nav-link {
+  width: 100%;
+}
+
+.startButton{
+  background: #000 url("./Content/Game_Field_Background.png");
+  height: 94%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+
+.StartLink{
+  background-color: #463f21 !important;
+  border-radius: 12px !important; 
+  border-width: 2px !important;
+  border-color: rgb(196, 169, 15) !important;   
+  padding: 5px !important;
+}
+
+.Start{
+  text-decoration: none;
+  font-family: Courier;
+  font-size: 21px;  
+  font-weight: bold;  
+  color: rgb(196, 169, 15) !important;
+  margin: 0;
+}
+
+.Start:visited{
+  color: rgb(196, 169, 15);
+  box-shadow: none;
+}
+
+.StartPage{
+  height: 100vh;
+}
+
+.Navbar{
+  height: 6% !important;
+  background: #1f1c13 !important;
+}
+
+.Navbar_brand{
+  position: relative;
+}
+
+.logo{
+  width: 23px;
+  height: 23px;
+  margin-left: 0.7%;
+  margin-right: 8px;
+}
+
+.hp{
+  font-family: Courier;
+  font-weight: bold;  
+  margin-right: 80px !important;
+  margin: 0;
+  color: rgb(202, 150, 37);
+}
+
+.scores{
+  font-weight: bold;  
+  font-family: Courier;
+  margin: 0;
+  color: rgb(202, 150, 37);
+}
+
+
+@media (max-width: 1240px){
+  .Navbar {
+      min-width: 1240px;
+  }
+}
+
+@media (max-width: 960px){
+  .Navbar {
+      min-width: 960px;
+  }
+}
+  

@@ -1,0 +1,383 @@
+body {
+    margin: 0;
+
+    min-height: 100vh;
+    background: #000 url("./Content/Game_Field_Background.png");
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.FieldOfGameAndButtons{
+    background: rgb(0, 0, 0) url("./Content/Game_Field_Background_Second.jpg");
+    height: 94%;
+    margin: 0;
+}
+
+img{
+    height: auto;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 6%;
+    background-color: #1f1c13;
+    color: rgb(202, 150, 37);
+    font-family: Courier New;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.logo {
+    width: 25px;
+    height: 25px;
+    margin-left: 0.7%;
+}
+
+.wrapper {
+    height: 93%;
+}
+
+.navigation_field {
+    margin: 0;
+    background-color: rgb(42, 42, 121);
+}
+
+.game_field {
+    display: flex;
+    flex-wrap: wrap;
+    width: 960px;
+    height: 580px;
+}
+
+.excel {
+    width: 96px;
+    height: 57px;
+    padding: 2px;
+}
+
+.mainship {
+    background: url("./Content/Starships/Hero_Ship.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.shotEnemy {
+    background: url("./Content/Explosions/Explosion2/Explosion2_3.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.buttons {
+    /*margin-top: 80%; */
+    font-size: 16px;
+}
+
+.left_field {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.controlButton{
+    height: 66px;
+    width: 66px;
+    margin: 5px;
+    background-color:#1f1c13;
+    border-radius: 15px;
+    border: #dcac10 3px solid;
+    color:#d3a611;
+}
+
+.bonusHealth{
+    background: url("./Content/Bonuses/HP_Bonus.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.bonusPlusToScores{
+    background: url("./Content/Bonuses/Enemy_Speed_Debuff_Bonus.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@keyframes MoveUp {
+    0%{
+        transform: translate(0px, 0px);
+    }
+    100%{
+        transform: translate(0px, 57px);
+    }
+}
+
+@keyframes MoveRight {
+    0%{
+        transform: translate(0px, 0px);
+    }
+    100%{
+        transform: translate(0px, -57px);
+    }
+}
+
+@keyframes MoveLeft {
+    0%{
+        transform: translate(0px, 0px);
+    }
+    100%{
+        transform: translate(-96px, 0px);
+    }
+}
+
+@keyframes MoveDown {
+    0%{
+        transform: translate(0px, 0px);
+    }
+    100%{
+        transform: translate(96px, 0px);
+    }
+}
+
+.animationMoveYUp{
+    animation: MoveUp 0.2s infinite;
+
+}
+
+.animationMoveYDown{
+    animation: MoveDown 0.2s infinite;
+}
+
+.animationMoveXRight{
+    animation: MoveRight 0.2s infinite;
+}
+
+.animationMoveXLeft{
+    animation: MoveLeft 0.2s infinite;
+}
+
+.enemy {
+    background: url("./Content/Starships/Enemy_Ship_1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.shot {
+    background: url("./Content/Shots/Hero_Shot.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@keyframes dieEnemy{
+    0% { 
+        opacity: 1; 
+        filter: hue-rotate(0deg);
+       }
+    100% { 
+         opacity: 0;
+         filter: hue-rotate(297deg);
+         }
+}
+
+@keyframes enemyMakesShot{
+    0% { filter: hue-rotate(0deg); }
+    50% { filter: hue-rotate(150deg); }
+    100% { filter: hue-rotate(0deg); }
+}
+
+@keyframes injuredEnemy{
+    0% {
+        background:rgb(136, 40, 40, 0.5);
+    };
+
+    100% {
+        background: #000 url("./Content/Game_Field_Background.png");
+    };
+}
+
+.animationDieEnemy {
+    width: 96px;
+    height: 58px;
+    animation: dieEnemy 0.5s infinite;
+}
+
+.animationMakeEnemyShot{
+    animation: enemyMakesShot 0.8s infinite;
+}
+
+.animationHitMainship{
+    animation: injuredEnemy 0.3s infinite;
+}
+
+
+.react-responsive-modal-modal {
+    height: 88%;
+    top: 5%;
+    width: 600px;
+    background-color: #221002;
+    filter: drop-shadow(0 0 3px rgba(100,0,0,0.5));
+    border-radius: 25px;
+    border: #b58d0a 3px solid;
+    box-shadow: 0 3px 15px 0 rgb(169 99 16);
+    color: #b58d0a;
+    text-align: center;
+}
+
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    color: #b58d0a;
+
+}
+
+.sizeLetters{
+    font-size : 30px;
+}
+
+.players{
+    display: inline-block;
+    text-align: left !important;
+}
+
+.scoresSecond {
+    float: right;
+    font-size: 10px;
+}
+
+
+.playersandscores{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.startButtonSecond{
+    margin-top: 60px;
+    background-color: #221002 !important;
+    box-shadow: 0 2px 15px 0 rgb(169 99 16);
+    color: #b58d0a;
+    border: #b58d0a 3px solid;
+    border-radius: 15px;
+}
+
+.pStart{
+    font-size: 34px;
+    margin: 4px;
+    padding-bottom: 3px;
+}
+
+.startButtonSecond:hover{
+    border: #fbca27 3px solid;
+    border-radius: 15px;
+}
+
+.writingFirst{
+    margin-top: 60px;
+    text-align: left;
+}
+
+.writingSecond{
+    margin-top: 60px;
+    text-align: left;
+}
+
+.formPlayer{
+    margin-top: 50px;
+}
+
+.continue{
+    border: #b58d0a 3px solid;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 10px;
+    background-color: #221002 !important;
+    margin-left: 30px;
+    color: #b58d0a;
+}
+
+
+.continue[disabled]{
+    background-color: grey !important;
+}
+
+.input{
+    padding-left: 10px;
+    height: 50px;
+    width: 300px;
+    border-radius: 12px;
+    border: #b58d0a 3px solid;
+    background-color: #221002 !important;
+    color: #b58d0a;
+    vertical-align: bottom;
+    font-size: 22px;
+
+}
+
+.buttons{
+    vertical-align: center;
+    width: 300px;
+}
+
+.firstRow{
+    text-align: center;
+}
+
+.secondRow{
+    text-align: center;
+}
+
+.thirdRow{
+    text-align: center;
+}
+
+.shoot {
+    border-radius: 27px !important;
+}
+
+.SecondButtons{
+    display: none;
+}
+
+.thirdButtons{
+    text-align: center;
+}
+
+@media (max-width: 1240px){
+    .navigation_field {
+        display: none;
+    }
+    .SecondButtons{
+        background-color: rgb(42, 42, 121);
+        display: inline-block;
+        min-width: 1240px;
+    }
+    .buttons{
+        display: none;
+    }
+}
+
+@media (max-width: 960px){
+    .SecondButtons{
+        background-color: rgb(42, 42, 121);
+        display: inline-block;
+        min-width: 960px;
+    }
+    .buttons{
+        display: none;
+    }
+    .navigation_field {
+        display: none;
+    }
+
+}
